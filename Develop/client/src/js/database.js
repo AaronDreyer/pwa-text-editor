@@ -18,7 +18,7 @@ console.log('Post to the jate database');
 const jateDb = await openDB('jate', 1);
 const tx = jateDb.transaction('jate', 'readwrite');
 const store = tx.objectStore('jate');
-const request = store.add({ jate: content });
+const request = store.add({ id: 1, value: content });
 const result = await request;
 console.log('data saved to the database', result);
 console.error('putDb not implemented');
