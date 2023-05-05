@@ -18,14 +18,17 @@ module.exports = () => {
       path: path.resolve(__dirname, 'dist'),
     },
     plugins: [
+      // generates HTML file
       new HtmlWebpackPlugin({
         template: './index.html',
         title: 'Jate',
       }),
+      // generates service worker that will cache the assets
       new InjectManifest({
         swSrc: './src-sw.js',
         swDest: 'src-sw.js',
       }),
+      // generates manifest file
       new WebpackPwaManifest({
         fingerprints: false,
         inject: true,
@@ -46,6 +49,7 @@ module.exports = () => {
       })
     ],
 
+    // specifies how different types of files should be handled by webpack for CSS and Javascript files
     module: {
       rules: [
         {

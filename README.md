@@ -30,7 +30,7 @@
 
   ## [Screenshots](#table-of-contents)
 
-  * 
+  * Homepage
   ![Homepage](./client/dist/assets/icons/images/radiant-mountain-72051.herokuapp.com_.png)
   
   ## [Credits](#table-of-contents)
